@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashScreenFragment">
+
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="com.example.projectkotlin.fragment.SplashScreenFragment"
+        android:label="SplashScreen"
+        tools:layout="@layout/fragment_splash_screen">
+        <action
+            android:id="@+id/action_splashScreenFragment_to_logInFragment"
+            app:destination="@id/logInFragment" />
+        <action
+            android:id="@+id/action_splashScreenFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/logInFragment"
+        android:name="com.example.projectkotlin.fragment.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action android:id="@+id/action_logInFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+
+        <action android:id="@+id/action_logInFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.projectkotlin.fragment.SignupFragment"
+        android:label="fragment_SignUp"
+        tools:layout="@layout/fragment_signup"/>
+
+    <action android:id="@+id/action_signUpFragment_to_logInFragment"
+        app:destination="@id/logInFragment" />
+
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.projectkotlin.fragment.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_servicesFragment"
+            app:destination="@id/servicesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_contactFragment"
+            app:destination="@id/contactFragment" />
+
+        <action
+            android:id="@+id/action_homeFragment_to_logInFragment"
+            app:destination="@id/logInFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/servicesFragment"
+        android:name="com.example.projectkotlin.fragment.ServicesFragment"
+        android:label="Services"
+        tools:layout="@layout/fragment_services">
+        <action
+            android:id="@+id/action_servicesFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/contactFragment"
+        android:name="com.example.projectkotlin.fragment.ContactFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_contact"/>
+
+</navigation>
